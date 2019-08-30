@@ -15,6 +15,11 @@ class CreateNoteTable extends Migration
     {
         Schema::create('note', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->char('prefix',5);
+            $table->integer('number');
+            $table->enum('type',['credito','debito']);
+            $table->double('value');
+            $table->biginteger('invoice_id');
             $table->timestamps();
         });
     }

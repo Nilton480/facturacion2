@@ -15,6 +15,9 @@ class CreatePaymentmethodTable extends Migration
     {
         Schema::create('paymentmethod', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('description');
+            $table->enum('status',['Efectivo','Tarjeta Crédito','Tarjeta Débito'])->default('Efectivo');
             $table->timestamps();
         });
     }

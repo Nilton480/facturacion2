@@ -15,6 +15,9 @@ class CreateTaxTable extends Migration
     {
         Schema::create('tax', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('code');
+            $table->string('value');
+            $table->enum('type',['porcentaje','numero']);
             $table->timestamps();
         });
     }
