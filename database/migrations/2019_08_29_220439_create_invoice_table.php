@@ -15,6 +15,16 @@ class CreateInvoiceTable extends Migration
     {
         Schema::create('invoice', function (Blueprint $table) {
             $table->bigIncrements('id');
+               $table->char('prefix',5);
+            $table->integer('invoice_id');
+            $table->date('date_invoice');
+            $table->date('expiration_date');
+            $table->enum('type_invoice',['credito','contado'])->default('contado');
+            $table->biginteger('customers_id');
+            $table->double('invoice_value');
+            $table->enum('status_invoice',['anulada','canselada','activa','parcial'])
+            ->default('activa');
+            $table->biginteger('seller_id');
             $table->timestamps();
         });
     }
