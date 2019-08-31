@@ -15,8 +15,7 @@ class CreatePaymentTable extends Migration
     {
         Schema::create('payment', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigIncrements('id');
-            $table->integer('invoice_id');
+            $table->biginteger('invoice_id');
             $table->string('value');
             $table->date('date_invoice');
             $table->string('payment_tmethod_id');
