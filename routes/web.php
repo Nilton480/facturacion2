@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('template');
 });
+Route::resource('invoices','invoice');
+Route::resource('product','product',['only'=>['index','create','store','udate','destroy']]);
+Route::resource('customers','customers',['excpt'=>['show']]);

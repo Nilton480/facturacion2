@@ -50,6 +50,7 @@
         <li><a href="#">CLIENTE </a></li>
         <li><a href="#">NOTAS</a></li>
         <li><a href="#">PAGOS</a></li>
+         <li><a href="#">PRODUCTOS</a></li>
       </ul>
           
         
