@@ -21,3 +21,4 @@ Route::resource('tax','taxcontroller');
 Route::resource('payment','paymentcontroller');
 Route::resource('detail','detailcontroller');
 Route::resource('note','notecontroller');
+Route::resource('users','userscontroller');

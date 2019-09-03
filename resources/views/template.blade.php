@@ -52,6 +52,7 @@
         <li><a href="{{ Route('payment.index') }}">PAGOS</a></li>
         <li><a href="{{ Route('product.index') }}">PRODUCTOS</a></li>
         <li><a href="{{ Route('tax.index') }}">IMPUESTOS </a></li>
+       
       </ul>
           
         
