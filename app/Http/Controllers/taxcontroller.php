@@ -13,7 +13,7 @@ class taxcontroller extends Controller
      */
     public function index()
     {
-        //
+        return 'index';
     }
 
     /**

@@ -13,7 +13,7 @@ class paymentmethodcontroller extends Controller
      */
     public function index()
     {
-        //
+        return 'index';
     }
 
     /**

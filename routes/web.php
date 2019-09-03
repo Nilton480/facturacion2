@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('template');
 });
-Route::resource('invoices','invoice');
-Route::resource('product','product',['only'=>['index','create','store','udate','destroy']]);
-Route::resource('customers','customers',['excpt'=>['show']]);
+Route::resource('invoices','invoicescontroller');
+Route::resource('product','productcontroller');
+//Route::resource('customer','customerscontroller');
+Route::resource('tax','taxcontroller');
+Route::resource('payment','paymentcontroller');
+Route::resource('detail','detailcontroller');
+Route::resource('note','notecontroller');

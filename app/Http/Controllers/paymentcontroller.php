@@ -13,7 +13,7 @@ class paymentcontroller extends Controller
      */
     public function index()
     {
-        //
+        return 'index';
     }
 
     /**

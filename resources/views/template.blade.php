@@ -45,12 +45,13 @@
         </div>                      
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="{{ url('invoices.index') }}">FACTURA</a></li>
-        <li><a href="#">DETALLE</a></li>
+        <li><a href="{{ Route('invoices.index') }}">FACTURA</a></li>
+        <li><a href="{{ Route('detail.index') }}">DETALLE</a></li>
         <li><a href="#">CLIENTE </a></li>
-        <li><a href="#">NOTAS</a></li>
-        <li><a href="#">PAGOS</a></li>
-         <li><a href="#">PRODUCTOS</a></li>
+        <li><a href="{{ Route('note.index') }}">NOTAS</a></li>
+        <li><a href="{{ Route('payment.index') }}">PAGOS</a></li>
+        <li><a href="{{ Route('product.index') }}">PRODUCTOS</a></li>
+        <li><a href="{{ Route('tax.index') }}">IMPUESTOS </a></li>
       </ul>
           
         
