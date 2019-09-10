@@ -24,7 +24,7 @@
        <div class="form-group">
        <input type="submit" value="enviar formulario" class="bt bt-primay" >
      </div> 
-     <input type="hidden" name="_token" value="{{ csrf_token }}"> 
+     <input type="hidden" name="_token" value="{{ csrf_token() }}"> 
    </form>
 </div>
 </div>
