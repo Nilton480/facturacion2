@@ -33,8 +33,8 @@ class notecontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   $note =new note;
+        return 'guardar mensaje';
     }
 
     /**
@@ -43,9 +43,10 @@ class notecontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function showform()
+    {   // $note->all();
+
+        return view('note');
     }
 
     /**

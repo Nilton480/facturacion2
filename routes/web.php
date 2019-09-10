@@ -21,4 +21,8 @@ Route::resource('tax','taxcontroller');
 Route::resource('payment','paymentcontroller');
 Route::resource('detail','detailcontroller');
 Route::resource('note','notecontroller');
+Route::POST('note','notecontroller@store')->name('note.store');
 //Route::resource('users','userscontroller');
+/*Route::get('/note', function () {
+    return view('note');
+});*/
