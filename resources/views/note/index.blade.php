@@ -11,7 +11,7 @@
   <div class="row justify-content-center">
   <div class="col-md-5">
     <h2>enviar mensaje</h2>
-   <form action="" method="POST">
+   <form action="{{route('note.store')}}" method="POST">
      <div class="form-group">
        <input type="text" name="name" class="form-control" placeholder="escrive tu nombre ">
      </div>
@@ -23,7 +23,8 @@
        </div>
        <div class="form-group">
        <input type="submit" value="enviar formulario" class="bt bt-primay" >
-     </div>  
+     </div> 
+     <input type="hidden" name="_token" value="{{ csrf_token }}"> 
    </form>
 </div>
 </div>
