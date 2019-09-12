@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\controller\note;
+use App\Http\Controllers\Controller;
+use App\note;
 class notecontroller extends Controller
 {
     /**
@@ -33,8 +34,10 @@ class notecontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   $note =new note;
-        return 'guardar mensaje';
+    {   
+        $note=note::create($request->all());
+        dd($note);
+        //return 'guardar mensaje';
     }
 
     /**
