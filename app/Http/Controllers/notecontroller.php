@@ -22,9 +22,11 @@ class notecontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $name =$request['name'];
+        $email= $request['email'];
+        $mensaje= $request['mensaje'];
     }
 
     /**

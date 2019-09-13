@@ -13,9 +13,9 @@ class CreateNoteTable extends Migration
      */
     public function up()
     {
-        Schema::create('notes', function (Blueprint $table) {
+        Schema::create('note', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('prefix',5);
+           // $table->char('prefix',5);
             $table->integer('number');
             $table->enum('type',['credito','debito']);
             $table->double('value');
@@ -31,6 +31,6 @@ class CreateNoteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notes');
+        Schema::dropIfExists('note');
     }
 }
