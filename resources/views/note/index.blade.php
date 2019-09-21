@@ -16,7 +16,7 @@
        <input type="text" name="name" class="form-control" placeholder="escrive tu nombre ">
      </div>
       <div class="form-group">
-       <input type="text" name="prefix" class="form-control" placeholder="prefix ">
+       <input type="text" name="prefix" class="form-control" placeholder="prefix,parciales ">
      </div>
       <div class="form-group">
        <input type="number" name="number" class="form-control" placeholder="number">
@@ -35,7 +35,11 @@
        </div>
        <div class="form-group">
        <input type="submit" value="enviar formulario" class="bt bt-primay" >
+       
      </div> 
+     <div class="form-group">
+      
+     
      <input type="hidden" name="_token" value="{{ csrf_token() }}"> 
    </form>
 </div>
