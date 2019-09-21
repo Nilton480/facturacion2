@@ -15,8 +15,20 @@
      <div class="form-group">
        <input type="text" name="name" class="form-control" placeholder="escrive tu nombre ">
      </div>
+      <div class="form-group">
+       <input type="text" name="prefix" class="form-control" placeholder="prefix ">
+     </div>
+      <div class="form-group">
+       <input type="number" name="number" class="form-control" placeholder="number">
+     </div>
      <div class="form-group">
-       <input type="email" name="email" class="form-control" placeholder="escrive tu email ">
+       <input type="value" name="value" class="form-control" placeholder="value">
+     </div>
+     <div class="form-group">
+       <input type="type" name="type" class="form-control" placeholder="credito o contado ">
+     </div>
+     <div class="form-group">
+       <input type="invoice_id" name="invoice_id" class="form-control" placeholder="invoice_id">
      </div>
        <div class="form-group">
       <textarea name="mensaje" class="form-control" placeholder="escrive tu mensaje "></textarea>

@@ -13,13 +13,15 @@ class CreateNoteTable extends Migration
      */
     public function up()
     {
-        Schema::create('note', function (Blueprint $table) {
+        Schema::create('notes', function (Blueprint $table) {
             $table->bigIncrements('id');
-           // $table->char('prefix',5);
-            $table->integer('number');
+            $table->char('name',15)->nullable();
+            $table->char('prefix',15)->nullable();
+            $table->char('mensaje',30);
+            $table->integer('number')->nullable();
             $table->enum('type',['credito','debito']);
-            $table->double('value');
-            $table->biginteger('invoice_id');
+            $table->double('value')->nullable();
+            $table->biginteger('invoice_id')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateNoteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('note');
+        Schema::dropIfExists('notes');
     }
 }

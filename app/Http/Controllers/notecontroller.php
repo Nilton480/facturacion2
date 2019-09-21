@@ -24,9 +24,9 @@ class notecontroller extends Controller
      */
     public function create(Request $request)
     {
-        $name =$request['name'];
+       /* $name =$request['name'];
         $email= $request['email'];
-        $mensaje= $request['mensaje'];
+        $mensaje= $request['mensaje'];*/
     }
 
     /**
@@ -37,9 +37,18 @@ class notecontroller extends Controller
      */
     public function store(Request $request)
     {   
-        $note=note::create($request->all());
-        dd($note);
+       // $note=note::create($request->all());
+        //dd($note);
         //return 'guardar mensaje';
+        $note =new note;
+        $note->name=request()->name;
+        $note->prefix=request()->prefix;
+        $note->number =request()->number;
+        $note->type =request()->type;
+        $note->value =request()->value;
+        $note->invoice_id =request()->invoice_id;
+         $note->mensaje=request()->mensaje;
+        $note->save();
     }
 
     /**
@@ -62,7 +71,7 @@ class notecontroller extends Controller
      */
     public function edit($id)
     {
-        //
+       // $note=name::findOrfail(id); //name es el articulo que deseo ver
     }
 
     /**
@@ -74,7 +83,9 @@ class notecontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $note=::findOrfail(id);
+        $note->update($request->all());
+        return redirect('note.index');
     }
 
     /**
