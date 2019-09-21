@@ -84,8 +84,8 @@ class notecontroller extends Controller
     public function update(Request $request, $id)
     {
        // $note=::findorfail(id);
-       // $note->update($request->all());
-        //return redirect('note.index');
+        $note->update($request->all());
+        return redirect('note.index');
     }
 
     /**
