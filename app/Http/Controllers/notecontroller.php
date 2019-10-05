@@ -97,6 +97,8 @@ class notecontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $note=note::findorfail($id);
+        $note->delete();
+        return view('note.index');
     }
 }
