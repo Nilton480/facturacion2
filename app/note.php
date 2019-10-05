@@ -8,7 +8,9 @@ class note extends Model
 {
    protected $fillable =[
      'prefix','number','type','value','invoce_id'//,'name','mensaje'
-
-
-   ];
+    ];
+    
+   public function result(){
+    	return $this->belongsToMany(Result::class);
+    }
 }
