@@ -71,7 +71,8 @@ class notecontroller extends Controller
      */
     public function edit($id)
     {
-       // $note=name::findOrfail(id); //name es el articulo que deseo ver
+       $note=note::findOrfail($id); //nota es el registro que deseo ver, donde $id es la identificacion de ese registro
+       return view('note.edit', compact('note'));
     }
 
     /**
@@ -83,9 +84,9 @@ class notecontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        $note=::findorfail(id);
+        $note=note::findorfail($id);
         $note->update($request->all());
-        return redirect('note.index');
+        return view('note.edit',compact('note'));
     }
 
     /**
